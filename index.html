@@ -6,13 +6,13 @@
 <title>王Sir（王先生）</title>
 <meta name="description" content="王Sir，十余年网络营销与SEO推广实战经验，专注网站流量增长、搜索引擎优化和SEM广告优化，提供专业网络营销咨询服务。">
 <meta name="keywords" content="王Sir, 网络营销, SEO, SEM, 网站优化, 流量增长, 广告投放, 营销咨询">
-<link rel="canonical" href="https://www.wangsir.net/">
+<link rel="canonical" href="https://wangsir.net/">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="王Sir（王先生）">
 <meta property="og:description" content="王Sir，十余年网络营销与SEO推广实战经验，专注网站流量增长、搜索引擎优化和SEM广告优化，提供专业网络营销咨询服务。">
-<meta property="og:url" content="https://www.wangsir.net/">
+<meta property="og:url" content="https://wangsir.net/">
 <meta property="og:image" content="https://www.wangxiansheng.com/images/logo.png">
 
 <!-- Twitter Card -->
@@ -28,7 +28,7 @@
   "@type": "Person",
   "name": "王Sir",
   "alternateName": "王先生",
-  "url": "https://www.wangsir.net/",
+  "url": "https://wangsir.net/",
   "image": "https://www.wangxiansheng.com/images/logo.png",
   "jobTitle": "网络营销专家",
   "description": "王Sir，十余年网络营销与SEO推广实战经验，专注网站流量增长、搜索引擎优化和SEM广告优化，提供专业网络营销咨询服务。",
@@ -40,39 +40,281 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 <style>
-body { font-family: "Microsoft YaHei", sans-serif; color:#333; background:#fdfdfd; line-height:1.6; }
-header { background: #1E3A8A; color: #fff; padding: 80px 15px 60px; text-align:center; }
-header h1 { font-size:4rem; margin-bottom:1.5rem; }
-header p { margin-top:0.8rem; margin-bottom:0.8rem; }
+:root {
+  --primary-color: #1E3A8A;
+  --secondary-color: #3B82F6;
+  --accent-color: #10B981;
+  --light-bg: #F8FAFC;
+  --dark-text: #1E293B;
+  --light-text: #64748B;
+  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --transition: all 0.3s ease;
+}
 
-/* Section */
-section { padding:60px 15px; max-width:1000px; margin:auto; }
-h2 { color:#1E3A8A; margin-bottom:40px; text-align:center; position:relative; }
-h2::after { content:""; display:block; width:60px; height:3px; background:#1E3A8A; margin:10px auto 0; border-radius:2px; }
+body {
+  font-family: "Helvetica Neue", "Segoe UI", "Microsoft YaHei", sans-serif;
+  color: var(--dark-text);
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
 
-/* 卡片风格 */
-.card-seo, .card-sem, .card-contact { background: #f0f4ff; padding:25px 20px; border-radius:12px; margin-bottom:25px; display:flex; flex-direction:column; justify-content:flex-start; }
+/* 头部区域 */
+header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 100px 15px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 
-/* 联系方式 */
-.contact-info { text-align:center; margin-bottom:15px; }
-.contact-info li { font-size:1.2rem; margin-bottom:8px; display:flex; justify-content:center; align-items:center; gap:10px; }
-.contact { display:flex; justify-content:center; margin-top:10px; }
-.contact img { width:150px; border-radius:8px; }
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.05)" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+  background-size: cover;
+  background-position: center bottom;
+  opacity: 0.5;
+}
 
-/* 列表图标 */
-ul { list-style:none; padding-left:0; margin-bottom:0; }
-ul li { margin-bottom:12px; display:flex; align-items:center; font-size:1rem; gap:10px; }
-ul li i { color:#1E3A8A; flex-shrink:0; }
+header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
 
-/* 段落间距 */
-p { margin-top:0.8rem; margin-bottom:0.8rem; }
+header p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 1rem auto;
+  opacity: 0.9;
+  position: relative;
+}
 
-/* 底部 */
-footer { background:#f8f9fa; padding:30px 15px; text-align:center; font-size:14px; color:#666; }
+/* 通用部分样式 */
+section {
+  padding: 80px 15px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-/* a 链接样式 */
-a.text-body { color: #333; text-decoration:none; }
-a.text-body:hover { text-decoration:underline; }
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+h3 {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* 卡片样式 */
+.card-seo, .card-sem, .card-contact {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-seo:hover, .card-sem:hover, .card-contact:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+}
+
+/* 列表样式 - 修复垂直居中问题 */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+ul li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center; /* 确保垂直居中 */
+  font-size: 1.05rem;
+  gap: 15px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+/* 修复图标对齐 - 移除固定宽高，确保垂直居中 */
+ul li i {
+  color: var(--secondary-color);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* 联系方式区域 */
+.contact-info {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.contact-info li {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 确保垂直居中 */
+  gap: 15px;
+  border-bottom: none;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact img {
+  width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.contact img:hover {
+  transform: scale(1.05);
+}
+
+/* 底部样式 */
+footer {
+  background: var(--primary-color);
+  padding: 30px 15px;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  section {
+    padding: 60px 15px;
+  }
+  
+  .card-seo, .card-sem, .card-contact {
+    padding: 20px;
+  }
+  
+  ul li {
+    font-size: 1rem;
+  }
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-seo, .card-sem, .card-contact {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.card-seo {
+  animation-delay: 0.1s;
+}
+
+.card-sem {
+  animation-delay: 0.2s;
+}
+
+.card-contact {
+  animation-delay: 0.3s;
+}
+
+/* 链接样式 */
+a.text-body {
+  color: var(--dark-text);
+  text-decoration: none;
+  transition: var(--transition);
+  position: relative;
+}
+
+a.text-body:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a.text-body::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--secondary-color);
+  transition: var(--transition);
+}
+
+a.text-body:hover::after {
+  width: 100%;
+}
 </style>
 </head>
 <body>
@@ -138,7 +380,7 @@ a.text-body:hover { text-decoration:underline; }
 </section>
 
 <footer>
-    &copy;2025 <a href="https://www.wangxiansheng.com" target="_blank" class="text-body">王先生</a> 版权所有
+    &copy;2025 <a href="https://www.wangxiansheng.com" target="_blank">王先生</a> 版权所有
 </footer>
 
 </body>
